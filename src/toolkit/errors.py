@@ -1,5 +1,5 @@
-a=int(input())
-b=int(input())
+a=input()
+b=input()
 try:
     print(a/b)
 except ZeroDivisionError:
