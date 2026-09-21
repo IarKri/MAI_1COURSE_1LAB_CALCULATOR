@@ -1,5 +1,7 @@
 a=input()
 b=input()
+
+#initializing errors
 try:
     print(a/b)
 except ZeroDivisionError:

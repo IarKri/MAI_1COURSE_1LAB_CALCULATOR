@@ -1,31 +1,36 @@
 from tokenizer import to_RPN
+from classes import Stack
+from validator import minusminus_plusplus
 
 def calculator(chars):
-    tokens = to_RPN(chars)
-    output=[]
+    tokens = minusminus_plusplus(chars)
+    tokens = to_RPN(tokens)
+    output=Stack()
     for token in tokens:
         value, kind = token[0], token[1]
         if kind=="NUMBER":
-            output.append(value)
+            output.push(value)
         elif kind=="UNARY_MINUS":
             number_1=float(output.pop())
-            output.append(number_1*(-1))
+            output.push(number_1*(-1))
+        elif kind=="UNARY_PLUS":
+            pass
         else:
             number_2=float(output.pop())
             number_1=float(output.pop())
             if value == '+':
-                output.append(number_1+number_2)
+                output.push(number_1+number_2)
             if value == '-':
-                output.append(number_1-number_2)
+                output.push(number_1-number_2)
             if value == '*':
-                output.append(number_1*number_2)
+                output.push(number_1*number_2)
             if value == '/':
-                output.append(number_1/number_2)
+                output.push(number_1/number_2)
             if value == '//':
-                output.append(number_1//number_2)
+                output.push(number_1//number_2)
             if value == '%':
-                output.append(number_1%number_2)
-    return output
+                output.push(number_1%number_2)
+    return output.pop()
 
-s='-12*3+123//-123'
+s='--12*3++123//-123'
 print(calculator(s))
