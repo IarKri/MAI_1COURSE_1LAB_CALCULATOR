@@ -1,25 +1,36 @@
-def tokenize_fsm(expr):
-    tokens = []
-    state = 'START'
-    current_token = ''
-    
-    for char in expr:
-        if state == 'START':
-            if char.isdigit():      #проверяем цифру
-                state = 'NUMBER'    #меняем статус со старта на значение
-                current_token = char    #добавляем в строку значение 
-            # дописать, не забываем про числа с точкой
-            elif char in ['-', '+']:  # если символ является оператором, то мы его пропускаем, потому что в строке собираем только значения
-                pass
-                
-        elif state == 'NUMBER':    
-            if char.isdigit():
-                current_token += char
-            # дописать
-        # дописать
-    
-    # Завершающая обработка
-    if state == 'NUMBER' or state == 'ВАШЕ СОСТОЯНИЕ':
-        tokens.append(('NUMBER', float(current_token))) # записываем тип токена - NUMBER и его значение
-    
-    return tokens #возвращаем набор типизированныхз токенов (в нашем случае это только цифры, без опреаторов)
+from tokenizer import to_RPN
+from classes import Stack
+from validator import minusminus_plusplus
+
+def calculator(chars):
+    tokens = minusminus_plusplus(chars)
+    tokens = to_RPN(tokens)
+    output=Stack()
+    for token in tokens:
+        value, kind = token[0], token[1]
+        if kind=="NUMBER":
+            output.push(value)
+        elif kind=="UNARY_MINUS":
+            number_1=float(output.pop())
+            output.push(number_1*(-1))
+        elif kind=="UNARY_PLUS":
+            pass
+        else:
+            number_2=float(output.pop())
+            number_1=float(output.pop())
+            if value == '+':
+                output.push(number_1+number_2)
+            if value == '-':
+                output.push(number_1-number_2)
+            if value == '*':
+                output.push(number_1*number_2)
+            if value == '/':
+                output.push(number_1/number_2)
+            if value == '//':
+                output.push(number_1//number_2)
+            if value == '%':
+                output.push(number_1%number_2)
+    return output.pop()
+
+s='--12*3++123//-123'
+print(calculator(s))
