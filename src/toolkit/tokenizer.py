@@ -1,5 +1,5 @@
 import re
-from classes import Stack
+from toolkit.classes import Stack
 
 #tokenizing 
 def tokenize(chars):               
@@ -27,7 +27,7 @@ def tokenize(chars):
     return tokens
 
 #transforming_to_RPN
-def to_RPN(tokens):
+def shunting_yard(tokens):
     tokens=(tokenize(tokens))
     for char in range(len(tokens)):
         if (tokens[char][1] == "MINUS" or tokens[char][1] == "PLUS") and (char == 0 or tokens[char-1][1] != "NUMBER"):           
@@ -54,8 +54,9 @@ def to_RPN(tokens):
     return output 
 
 # s='--12*3++123//-123'
-# print(to_RPN(s))
+# print(shunting_yard(s))
 
 ######Добваить унарный плюс - сделал
 ######Сделать operators - объектом класса, разобрать с ошибкой operators[-1] в строке 41 (недопустимо [-1] т.к. не введен нужный метод) - сделал
-######Сделать class Stack для operators вместо 
+######Сделать class Stack для operators вместо списка - сделал
+######Сделать проверку формата int для // и %

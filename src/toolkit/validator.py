@@ -1,7 +1,14 @@
-from tokenizer import tokenize
+from toolkit.tokenizer import tokenize
+
+def space_cleaning(chars):
+    while ' ' in chars:
+        chars=chars.replace(' ', '')
+    return chars
 
 #double_minus\plus
 def minusminus_plusplus(chars):
+    while ' ' in chars:
+        chars=chars.replace(' ', '')
     while '--' in chars:
         chars=chars.replace('--','+')
     while '++' in chars:
@@ -9,13 +16,14 @@ def minusminus_plusplus(chars):
     return chars
 
 #double_operator_error
-def double_operator(chars):
-    tokens=tokenize(chars)
-    for token in range(len(tokens)):
-        if (tokens[token][1]!="NUMBER" and tokens[token+1]=="OPERATOR") or (tokens[token][1]=="OPERATOR" and tokens[token+1]!="NUMBER"):
+def double_operator_check(chars):
+    tokens=[tokens for tokens in chars.split()]
+    for token in range(len(tokens)-1):
+        if (tokens[token][1]!="NUMBER" and tokens[token+1]=="OPERATOR"):
             return SyntaxError("Невозможная математическая операция")
+    # return tokens
 
 
-
-s="1+*2"
-print(double_operator(s))
+# s="1*+2"
+# print(double_operator(s))
+##программа моежт некорректно работать с пробелами и двойным минусом/плюсом - составить алгоритм по корректной поэтапной зачистке/проверке выражения
