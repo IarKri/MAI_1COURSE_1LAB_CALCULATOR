@@ -26,3 +26,5 @@ from toolkit.converter import converter
 
 def test_valid_converter(value, from_unit_to_unit, expected):
     assert converter(value, from_unit_to_unit) == pytest.approx(expected, abs = 0.005)
+
+#дописать тесты на запуски с ошибкой

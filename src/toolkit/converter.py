@@ -18,28 +18,26 @@ def converter(value, from_unit_to_unit):
                     "from g to kg": ('/',1000),
                     "from kg to g": ('*',1000)
                     }
-    
-    if from_unit_to_unit in dict_of_units:
-        return (value/float(dict_of_units[from_unit_to_unit][1])) if dict_of_units[from_unit_to_unit][0] == '/' else (value*float(dict_of_units[from_unit_to_unit][1]))
-    else:
 
+    if from_unit_to_unit in dict_of_units:
+        return (value/float(dict_of_units[from_unit_to_unit][1])) \
+            if dict_of_units[from_unit_to_unit][0] == '/' \
+                else (value*float(dict_of_units[from_unit_to_unit][1]))
+    else:
         #temperature
         if from_unit_to_unit == "from c to f":
             return value * 1.8 + 32
-        elif from_unit_to_unit == "from f to c":
+        if from_unit_to_unit == "from f to c":
             return (value - 32) / 1.8
-        elif from_unit_to_unit == "from c to k":
+        if from_unit_to_unit == "from c to k":
             return value + 273.15
-        elif from_unit_to_unit == "from k to c":
+        if from_unit_to_unit == "from k to c":
             return value - 273.15
-        elif from_unit_to_unit == "from k to f":
+        if from_unit_to_unit == "from k to f":
             return (value - 273.15)* 1.8 + 32
-        elif from_unit_to_unit == "from f to k":
+        if from_unit_to_unit == "from f to k":
             return (value - 32) / 1.8 + 273.15
 
 
 
 # print(converter(10,'from cm to mm'))
-
-
-                                            

@@ -37,3 +37,5 @@ from toolkit.calculator import calculator
 )
 def test_valid_calculation(expression, expected):
     assert calculator(expression) == pytest.approx(expected)
+
+#дописать тесты на запуски с ошибкой

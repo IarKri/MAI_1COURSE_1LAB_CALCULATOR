@@ -1,6 +1,6 @@
 #initializing_class_stack
 class Stack:
-    def __init__(self, *args): #__new__
+    def __init__(self):
         self.items = []
 
     def push(self, item):
@@ -10,10 +10,8 @@ class Stack:
         return self.items.pop()
 
     def is_empty(self):
-        return (self.items == [])
+        return not self.items
 
     def last(self):
         if self.items:
             return self.items[-1]
-        else:
-            pass
