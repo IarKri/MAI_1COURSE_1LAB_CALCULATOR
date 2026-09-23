@@ -1,41 +1,45 @@
 import re
-from toolkit.classes import Stack
+from classes import Stack
 
-#tokenizing 
-def tokenize(chars):               
+#tokenizing
+def tokenize(chars):
     tokens=[]
 
     #pattern
     pattern = re.compile(r'''
         (?P<NUMBER>\d+\.\d+|\d+)
       | (?P<PLUS>[+])
-      | (?P<MINUS>-)               
-      | (?P<OPERATOR>//|[*/%]+)           
-      | (?P<SPACE>\s+)              
-      | (?P<MISMATCH>.)             
+      | (?P<MINUS>-)   
+      | (?P<OPERATOR>//|[*/%]+)
+      | (?P<SPACE>\s+)
+      | (?P<MISMATCH>.)
     ''', re.VERBOSE)
 
     #typed tokens
     for token in pattern.finditer(chars):
-        value = token.group()                   
-        kind = token.lastgroup                 
+        value = token.group()
+        kind = token.lastgroup
         if kind == 'SPACE':
-            continue                            
+            chars=chars.replace(value, '')
+            continue
         if kind == 'MISMATCH':
-            raise SyntaxError("Неверный символ")
-        tokens.append((value, kind))                       
+            raise ValueError("Неверный символ")
+        tokens.append((value, kind))
     return tokens
 
 #transforming_to_RPN
 def shunting_yard(tokens):
-    tokens=(tokenize(tokens))
+    tokens=tokenize(tokens)
     for char in range(len(tokens)):
-        if (tokens[char][1] == "MINUS" or tokens[char][1] == "PLUS") and (char == 0 or tokens[char-1][1] != "NUMBER"):           
-            tokens[char] = (('-u',"UNARY_MINUS")) if tokens[char][1] == "MINUS" else (('+u', "UNARY_PLUS"))
-        elif (tokens[char][0] == "//" or tokens[char][0] == "%") and ('.'  in tokens[char-1][0] or '.'  in tokens[char+1][0]):
+        if (tokens[char][1] == "MINUS" or tokens[char][1] == "PLUS") and \
+            (char == 0 or tokens[char-1][1] != "NUMBER"):
+            tokens[char] = (('-u',"UNARY_MINUS")) if tokens[char][1] == "MINUS" \
+                else (('+u', "UNARY_PLUS"))
+        elif (tokens[char][0] == "//" or tokens[char][0] == "%") and \
+            ('.'  in tokens[char-1][0] or '.'  in tokens[char+1][0]):
             raise Exception("Неверное значение для целочисленного деления")
 
-    output=[]         
+    output=[]
     operators=Stack()
 
     #RPN_formating
@@ -50,13 +54,12 @@ def shunting_yard(tokens):
             operators.push((value, kind))
 
     while not operators.is_empty():
-        output.append(operators.pop())   
-    return output 
+        output.append(operators.pop())
+    return output
 
-# s='--12*3++123//-123'
+# s='se12 *3++123//-123'
 # print(shunting_yard(s))
 
 ######Добваить унарный плюс - сделал
-######Сделать operators - объектом класса, разобрать с ошибкой operators[-1] в строке 41 (недопустимо [-1] т.к. не введен нужный метод) - сделал
 ######Сделать class Stack для operators вместо списка - сделал
 ######Сделать проверку формата int для // и %
