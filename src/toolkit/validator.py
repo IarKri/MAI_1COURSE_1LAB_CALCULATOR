@@ -1,30 +1,46 @@
 from tokenizer import tokenize
+from errors import double_operator
+from errors import no_operator_between_numbers
+from errors import first_char_is_operator
+from errors import no_number_after_operator
+from errors import division_by_zero
+from errors import incorrect_float
+from errors import temperature_below_absolute_zero
+from errors import unknown_unit
+from errors import wrong_convertation_units
 
 def space_cleaning(chars):
     for char in chars:
         if char == ' ':
             chars=chars.replace(char, '')
     return chars
-#double_minus\plus
-def minusminus_plusplus(chars):
-    while '--' in chars:
-        chars=chars.replace('--','+')
-    while '++' in chars:
-        chars=chars.replace('++','+')
-    return chars
 
-#double_operator_error
-def post_validation_operators(chars):
-    for token in range(len(chars)-1):
-        return (chars[token][1]!="NUMBER" and chars[token+1]=="OPERATOR")
-    # return tokens
-def initial_validation_operators(chars):
+def initial_calculator_validation(expression):
+    if no_operator_between_numbers(expression):
+        raise ValueError("Между операндами нет оператора")
+    if first_char_is_operator(expression):
+        raise ValueError("Выражение не может начинаться на * / % //")
+    if no_number_after_operator(expression):
+        raise ValueError("Выражение не может заканчиваться оператором")
+    if double_operator(expression):
+        raise ValueError("Некорректная арифметическая операция")
+    if division_by_zero(expression):
+        raise ZeroDivisionError("Деление на 0")
+    if incorrect_float(expression):
+        raise ValueError("Число типа float введено некорректно")
+
+def initial_converter_validation(expression):
+    if unknown_unit(expression):
+        raise ValueError("Неизвестная единица измерения")
+    if wrong_convertation_units(expression):
+        raise ValueError("Разные типы единиц измерения")
+    if temperature_below_absolute_zero(expression):
+        raise ValueError("Температура ниже абсолютного нуля")
+
     
-    for token in range(len(chars)-2):
-        return (chars[token]!="NUMBER" and chars[token+1]!="NUMBER" and chars[token+2]!="NUMBER")
 
-# s="1*+2"
-# print(double_operator(s))
+# s="/1*+2"
+# print(initial_calculator_validation(s))
 ##программа моежт некорректно работать с пробелами и двойным минусом/плюсом - составить алгоритм по корректной поэтапной зачистке/проверке выражения
-
+##Проверить типы ошибок
 

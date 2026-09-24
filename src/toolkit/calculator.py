@@ -2,6 +2,7 @@ from tokenizer import shunting_yard
 from classes import Stack
 from validator import space_cleaning
 
+
 def calculator(chars):
     chars = space_cleaning(chars)
     tokens = shunting_yard(chars)
@@ -47,7 +48,7 @@ def calculator(chars):
                     raise ValueError("Неверный тип данных для вычисления остатка от деления")
     return float(output.pop())
 
-s='2.3*4//2'
+s='123.3*4//2'
 print(calculator(s))
 # print(shunting_yard(s))
 #if '.' not in str(number_1) and '.' not in str(number_2):
