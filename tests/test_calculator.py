@@ -1,6 +1,8 @@
 import pytest
 import re
-from toolkit.calculator import calculator
+from src.toolkit.calculator import calculator
+from src.toolkit.validator import initial_calculator_validation
+from src.toolkit.tokenizer import tokenize
 
 @pytest.mark.parametrize(
         "expression,expected",
@@ -38,4 +40,40 @@ from toolkit.calculator import calculator
 def test_valid_calculation(expression, expected):
     assert calculator(expression) == pytest.approx(expected)
 
-#дописать тесты на запуски с ошибкой
+@pytest.mark.parametrize(
+        "expression, error",
+    [
+        #Zero_Division
+        ("23/0","Division by 0"),
+        ("25*2/0", "Division by 0"),
+
+        #Several_Operators
+        ("12/*3", "Incorrect operation"),
+        ("34+5//*%3","Incorrect operation"),
+
+        #incorrect_float
+        ("5+.3", "Float type is incorrect"),
+        ("7-5.", "Float type is incorrect"),
+
+        #first_char_is_operator
+        ("*5+3", "Expression cant start with * / % //"),
+        ("/-7-3", "Expression cant start with * / % //"),
+
+        #no_number_after_operator
+        ("8*7-", "Expression cant end with + - * / % // "),
+        ("3-5*", "Expression cant end with + - * / % // "),
+
+        #no_operator_between_numbers
+        ("10 3", "No operator between numbers"),
+        ("13-4*3 5", "No operator between numbers"),
+    ]
+)
+def test_invalid_expression(expression, error):
+    with pytest.raises(ValueError, match=re.escape(error)):
+        initial_calculator_validation(expression)
+        calculator(expression)
+def test_invalid_expresiion_zero_division_error(expression, error):
+    with pytest.raises(ZeroDivisionError, match=re.escape(error)):
+        initial_calculator_validation(expression)
+        calculator(expression)
+   

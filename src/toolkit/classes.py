@@ -15,3 +15,6 @@ class Stack:
     def last(self):
         if self.items:
             return self.items[-1]
+
+    def size(self):
+        return len(self.items)

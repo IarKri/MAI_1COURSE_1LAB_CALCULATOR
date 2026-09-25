@@ -1,5 +1,5 @@
 import re
-from classes import Stack
+from src.toolkit.classes import Stack
 
 #tokenizing
 def tokenize(chars):
@@ -10,8 +10,9 @@ def tokenize(chars):
         (?P<NUMBER>\d+\.\d+|\d+)
       | (?P<PLUS>[+])
       | (?P<MINUS>-)   
-      | (?P<OPERATOR>//|[*/%]+)
+      | (?P<OPERATOR>//|[*/%])
       | (?P<SPACE>\s+)
+      | (?P<FLOAT_ERROR>\d+\.|\.\d+)
       | (?P<MISMATCH>.)
     ''', re.VERBOSE)
 
@@ -20,10 +21,11 @@ def tokenize(chars):
         value = token.group()
         kind = token.lastgroup
         if kind == 'SPACE':
-            chars=chars.replace(value, '')
             continue
         if kind == 'MISMATCH':
-            raise ValueError("Неверный символ")
+            raise ValueError("Incorrect character")
+        if kind == "FLOAT_ERROR":
+            raise ValueError("Float type is incorrect")
         tokens.append((value, kind))
     return tokens
 
@@ -35,9 +37,6 @@ def shunting_yard(tokens):
             (char == 0 or tokens[char-1][1] != "NUMBER"):
             tokens[char] = (('-u',"UNARY_MINUS")) if tokens[char][1] == "MINUS" \
                 else (('+u', "UNARY_PLUS"))
-        elif (tokens[char][0] == "//" or tokens[char][0] == "%") and \
-            ('.'  in tokens[char-1][0] or '.'  in tokens[char+1][0]):
-            raise Exception("Неверное значение для целочисленного деления")
 
     output=[]
     operators=Stack()
@@ -57,7 +56,7 @@ def shunting_yard(tokens):
         output.append(operators.pop())
     return output
 
-# s='se12 *3++123//-123'
-# print(shunting_yard(s))
+# s='5+.3'
+# print(tokenize(s))
 
 

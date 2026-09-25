@@ -1,42 +1,40 @@
-from tokenizer import tokenize
-from errors import double_operator
-from errors import no_operator_between_numbers
-from errors import first_char_is_operator
-from errors import no_number_after_operator
-from errors import division_by_zero
-from errors import incorrect_float
-from errors import temperature_below_absolute_zero
-from errors import unknown_unit
-from errors import wrong_convertation_units
+from src.toolkit.tokenizer import tokenize
+from src.toolkit.errors import several_operators
+from src.toolkit.errors import no_operator_between_numbers
+from src.toolkit.errors import first_char_is_operator
+from src.toolkit.errors import no_number_after_operator
+from src.toolkit.errors import division_by_zero
+from src.toolkit.errors import incorrect_float
+from src.toolkit.errors import temperature_below_absolute_zero
+from src.toolkit.errors import unknown_unit
+from src.toolkit.errors import wrong_convertation_units
 
 def space_cleaning(chars):
-    for char in chars:
-        if char == ' ':
-            chars=chars.replace(char, '')
+    while '  ' in chars:
+        chars=chars.replace('  ',' ')
     return chars
 
 def initial_calculator_validation(expression):
     if no_operator_between_numbers(expression):
-        raise ValueError("Между операндами нет оператора")
+        raise ValueError("No operator between numbers")
     if first_char_is_operator(expression):
-        raise ValueError("Выражение не может начинаться на * / % //")
+        raise ValueError("Expression cant start with * / % //")
     if no_number_after_operator(expression):
-        raise ValueError("Выражение не может заканчиваться оператором")
-    if double_operator(expression):
-        raise ValueError("Некорректная арифметическая операция")
+        raise ValueError("Expression cant end with + - * / % // ")
+    if several_operators(expression):
+        raise ValueError("Incorrect operation")
     if division_by_zero(expression):
-        raise ZeroDivisionError("Деление на 0")
-    if incorrect_float(expression):
-        raise ValueError("Число типа float введено некорректно")
+        raise ZeroDivisionError("Division by 0")
+    return False
 
 def initial_converter_validation(expression):
     if unknown_unit(expression):
-        raise ValueError("Неизвестная единица измерения")
+        raise ValueError("Unknown Unit")
     if wrong_convertation_units(expression):
-        raise ValueError("Разные типы единиц измерения")
+        raise ValueError("Different type of Units")
     if temperature_below_absolute_zero(expression):
-        raise ValueError("Температура ниже абсолютного нуля")
-
+        raise ValueError("Below absolute zero")
+    return False
     
 
 # s="/1*+2"

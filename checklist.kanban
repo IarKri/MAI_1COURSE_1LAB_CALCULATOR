@@ -1,0 +1,1015 @@
+{
+  "lists": [
+    {
+      "id": "1059eb2b-afb6-4531-a56d-aee29787bc85",
+      "title": "to do",
+      "cards": [
+        {
+          "id": "9a50aef0-14a9-4a83-8c90-8f5e94ddf20a",
+          "listId": "1059eb2b-afb6-4531-a56d-aee29787bc85",
+          "title": "main.py - make with argparsing",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "70f14607-4cf7-4ed3-91b3-bff6c61053d1",
+          "listId": "1059eb2b-afb6-4531-a56d-aee29787bc85",
+          "title": "doc-strings",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "b12c7822-a4ee-4e05-8b8b-9e46c1871093",
+          "listId": "1059eb2b-afb6-4531-a56d-aee29787bc85",
+          "title": "configs.json",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "48365bfd-daf9-44b6-a1c7-921e244004d2",
+          "listId": "1059eb2b-afb6-4531-a56d-aee29787bc85",
+          "title": "tests",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "623523d8-7b6a-4c5b-be9b-7e9c22a1c695",
+      "title": "In process",
+      "cards": []
+    },
+    {
+      "id": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+      "title": "Done",
+      "cards": [
+        {
+          "id": "15e12e15-10c2-4157-bcba-50b55200e76b",
+          "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+          "title": "Patch for plural +-",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "5e0b4913-4adf-47a3-a9e5-2932f1f040f6",
+          "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+          "title": "Patch for integers with // %",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "archive": {
+    "lists": [],
+    "cards": [
+      {
+        "id": "1a0b7ac4-4850-46f0-bc45-8f545799d1cc",
+        "listId": "1059eb2b-afb6-4531-a56d-aee29787bc85",
+        "title": "1) Patch for",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": [
+          {
+            "id": "00aebf29-6ddf-41cd-86d6-2dfa25ba95a7",
+            "comment": "p\n"
+          }
+        ]
+      },
+      {
+        "id": "f521b0df-7a7f-49c2-9188-64249230e94c",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "from tokenizer import shunting_yard",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "44689003-6127-4388-9291-4ebc63eda489",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "from classes import Stack",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "8d99358e-4483-4f1d-b7e0-c88d78e2c603",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "from validator import space_cleaning",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "ca2ce3e9-8de0-4cc8-ab32-f30d1e176368",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "from validator import initial_calculator_validation",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "80620e14-c18f-42d3-b64f-41844313d07b",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "def calculator(chars):",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "e1d0b86d-44e6-4cdf-8967-cc24c3287947",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "chars = space_cleaning(chars)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "51543d3e-6dae-4aad-95c0-8c5f44811112",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if initial_calculator_validation(chars):",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "8fb2ae5b-657d-4581-9c3e-67ae193990d8",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "print(initial_calculator_validation(chars))",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "426a553d-381a-4706-a17e-79cb4f8e2c78",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "tokens = shunting_yard(chars)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "275ed322-4ee3-4222-ba19-723321abdf19",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output=Stack()",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "06150bdc-01e1-4e1e-96d6-7f619b423304",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "unar_minuses=Stack()",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "9246c7ed-e8d1-45ec-85de-51f3563223ca",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "for token in tokens:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "337dd2b6-36d0-4248-912f-524325932ecc",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "value, kind = token[0], token[1]",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "a5fe35cf-05c6-4993-b13d-3213abeecd1f",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if kind==\"NUMBER\":",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "ba3708f1-9ca8-4dd0-92de-4ea6b5e54fc5",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if not unar_minuses.is_empty():",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "fd044434-22c0-46b4-b380-985c38bda010",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "while not unar_minuses.is_empty():",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "b35c33e5-e523-4c2b-879c-9b6165aaf3f5",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "value=unar_minuses.pop()*value",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "fe58da12-69cc-4192-b683-c2252d18888b",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(value)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "d87b6a5b-bbd6-4f2b-bb20-baece681e1d8",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "else:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "a607d494-92fa-49cf-a37d-54c47e1e47b1",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(value)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "6ed82a02-09bf-4a97-8eba-ee702b0cd827",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "elif kind==\"UNARY_MINUS\":",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "ef6aebaf-dd2b-4f42-8e47-3c7b9bccd88a",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if not output.is_empty():",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "fdeb3c60-2f16-427d-ab96-1525a2f60806",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "number_1=float(output.pop())",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "9a4cf25d-fa56-4d29-83bf-c6d84e45d4d4",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1*(-1))",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "6ca6aa38-0522-4d44-9d28-b2c5170e4560",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "else:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "e9ebe54a-1c9e-4e3a-8dbe-91281e19ef76",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "unar_minuses.push(-1)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "91c01957-b36c-40fb-8d58-797ed5859c90",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "elif kind==\"UNARY_PLUS\":",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "18db33d8-4c46-456b-aa71-2bee39a52c7d",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "pass",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "de4f2871-4e55-46bd-999f-028ad44639b1",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "else:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "d2335826-4f43-44df-b001-879127bbdb7d",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "number_2=float(output.pop())",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "6273d9af-c4ce-41ee-a15c-45bdff2cd87c",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "number_1=float(output.pop())",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "36b3cea4-b2bb-44cf-9c35-1f094878f43c",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '+':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "3af3b5d6-1523-4384-9974-a08e4700f756",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1+number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "0b9dd28e-2800-47f7-bd9c-e7ca5a02b67d",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '-':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "59f7fbfa-3d27-4d04-bccf-da6bfba459e0",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1-number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "7e32102d-11eb-4613-8ec6-1be8d88026ba",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '*':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "00d28853-687d-4e68-ae4e-6f012ff77168",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1*number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "bfb794ec-cc16-4038-a1fe-5223604af6ad",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '/':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "29b36e0c-908d-4815-ad78-05eefb8ed0ed",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1/number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "058ffd8a-72aa-438b-a487-2cb9b6308a23",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '//':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "7de98990-e6d9-41df-a888-4d96917552ab",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if number_2==int(number_2) and number_1==int(number_1):",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "ee297f2e-5691-492c-9368-eb28819ea33f",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1//number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "2ed3b294-e414-4dd1-bc3e-2bad2dd7d699",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "else:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "d3da84d3-078d-48e9-860d-9f8167943c49",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "raise ValueError(\"Incorrect value for operation with //\")",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "128c1916-d310-4b53-ab88-0772a3a3a374",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '%':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "6aa3ad5a-50ca-465b-8f4a-c0bd4d383fdd",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if number_2==int(number_2) and number_1==int(number_1):",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "3763de38-2b54-4e07-99c4-3ad756d07b1b",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1%number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "97dca374-61cc-4342-b2c2-eb2bb552ac2e",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "else:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "53d6049b-f891-4875-94e9-b5de93e0876f",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "raise ValueError(\"Incorrect value for operation wittn %\")",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "c95ef6a0-bd40-43c7-afd9-f0105c65f11e",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "return float(output.pop())",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "48366762-268d-4fe4-a430-46597bb26de6",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "s='-123*4//2'",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "815c1bee-3fd6-450b-84cc-760a2a0e4de6",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "# print(initial_calculator_validation(s))",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "d6a1fbad-07dd-46b8-8a60-76e346e8f4fa",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "print(calculator(s))",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "93a4280b-8c67-4233-aa83-aee55b4e4c4f",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "from tokenizer import shunting_yard",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "b333942b-5c27-4bb2-9554-b7c9cfabb79f",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "from classes import Stack",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "f3ed659a-9d0c-49b5-af22-e5683740d830",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "from validator import space_cleaning",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "426a43fc-ee61-46d3-b09a-ea779e721efa",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "from validator import initial_calculator_validation",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "a40943a9-bb03-4945-a8f0-b80707b7c17c",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "def calculator(chars):",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "eac37e18-037c-420b-a1e6-222702181587",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "chars = space_cleaning(chars)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "462496c9-493f-487c-accb-a79b835cfaa7",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if initial_calculator_validation(chars):",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "c62a4add-d714-4d4c-b5f0-060ddad4ece3",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "print(initial_calculator_validation(chars))",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "dbf96952-cb83-4526-a55a-bf5b46f895b0",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "tokens = shunting_yard(chars)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "e87998be-cf7f-4859-9e84-07ab760e181a",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output=Stack()",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "256d0c7d-e4ec-4d19-a977-acdcde13d159",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "unar_minuses=Stack()",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "d486aa74-74f7-4e3f-bd9c-06504349a084",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "for token in tokens:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "50a6e2d4-d521-4ead-b1c0-39d51a359b1f",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "value, kind = token[0], token[1]",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "9db0978c-5efa-456f-a1cc-b697afb5eb70",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if kind==\"NUMBER\":",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "cbc27aa8-7438-42e0-974e-d0676925d966",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if not unar_minuses.is_empty():",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "efa9984f-e450-459f-a721-99f6a879a310",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "while not unar_minuses.is_empty():",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "d50ef6da-aa47-4c6d-9788-82c8ce579726",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "value=unar_minuses.pop()*value",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "97d23a39-7484-4ba6-8b5c-8d3689d2017d",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(value)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "aaf17f59-706c-4094-84fa-1bea8157e35d",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "else:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "2ff10b80-d1af-4cfa-a920-83badfbba730",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(value)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "2f325e25-dd0c-43e5-ac72-603a5d232176",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "elif kind==\"UNARY_MINUS\":",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "6b9a204d-3c5a-48c9-9782-d49b86b28c61",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if not output.is_empty():",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "c531b10e-70d1-4fa0-aee1-77246c189fc3",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "number_1=float(output.pop())",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "1d179239-73c7-473e-a38e-8a0a001fecb0",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1*(-1))",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "72526b68-e319-4a6e-b20c-27f756924a1d",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "else:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "62399769-f6ce-4431-b616-e5184419e255",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "unar_minuses.push(-1)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "77265976-4cf8-4c33-b944-4143ad862a11",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "elif kind==\"UNARY_PLUS\":",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "b7cf8362-ca0b-42b7-8f02-381c2cbe3e88",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "pass",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "4a583728-031b-40b0-85ef-92fa163a98c0",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "else:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "6f85493c-4047-43e5-990f-66ed8af8a002",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "number_2=float(output.pop())",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "47715456-f613-4285-8fca-8749b7ed4fc2",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "number_1=float(output.pop())",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "49286709-da53-45b9-b3ec-070848e5d88f",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '+':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "f8159ed4-c3ad-4949-82b8-a8c8e9a34ef1",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1+number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "afe7c126-92c5-42f7-a0c8-c2dac9c3450c",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '-':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "07b5b807-9ea8-4bb6-a970-b7ff6692fc8b",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1-number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "a877fe69-8257-4ae5-b49b-252e7ccf815c",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '*':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "624bb46e-d8ac-4f26-a75b-088944e228fe",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1*number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "a49f71a0-d702-43cb-9ebd-0c0b41107d11",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '/':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "f0ec620d-11af-47c7-bbd7-7885a7379022",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1/number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "468d5dde-d330-4ff0-be3d-b232a131f3e9",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '//':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "c3db1421-958a-48bd-ac47-eeed4d080d7c",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if number_2==int(number_2) and number_1==int(number_1):",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "692c21ec-1439-4f4b-8e86-69dea7dc848d",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(number_1//number_2)",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "f28f3fb4-58aa-43f1-86b1-d04d9325730e",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "else:",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "6dc866b6-4d2b-40a0-86dc-37118f745f84",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "raise ValueError(\"Incorrect value for operation with //\")",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "cb2c6474-d7e0-45ab-8f82-9cb0616d0bc3",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if value == '%':",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "dc7153c3-2090-4fc4-b114-4c679da8b3f7",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "if number_2==int(number_2) and number_1==int(number_1):",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "e4a34c72-a17a-45a5-813f-381664d6d3ee",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "output.push(nu",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "063fe902-01ce-4eea-82c3-c237a17decb7",
+        "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+        "title": "Patch for plural +-",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      },
+      {
+        "id": "23d101b5-a412-47f5-8b3f-1a5619fb597b",
+        "listId": "1059eb2b-afb6-4531-a56d-aee29787bc85",
+        "title": "Patch for plural +-",
+        "description": "",
+        "labels": [],
+        "checkboxes": [],
+        "comments": []
+      }
+    ]
+  },
+  "settings": {
+    "labels": []
+  }
+}

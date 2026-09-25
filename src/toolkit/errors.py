@@ -9,15 +9,15 @@ def no_number_after_operator(chars):
     return False
 
 def incorrect_float(chars):
-    if any(f'.{char}' in chars or f'{char}.' in chars for char in '0123456789'):
+    if any(f' .{char}' in chars or f'{char}. ' in chars for char in '0123456789'):
         return True
     return False
 
-def double_operator(chars):
+def several_operators(chars):
     for char in range(len(chars)-1):
-        return chars[char] in ['+', '-', '*', '/', '//', '%'] and \
-            chars[char+1] in ['*', '/', '//', '%'] or \
-                chars[char] in ['*', '/', '//', '%'] and chars[char+1] in ['+', '-', '*', '/', '//', '%']
+        return((chars[char] in ['+', '-', '*', '/', '//', '%'] and \
+            chars[char+1] in ['*', '/', '//', '%']) or \
+                (chars[char] in ['*', '/', '//', '%'] and chars[char+1] in ['+', '-', '*', '/', '//', '%']))
 
 def no_operator_between_numbers(chars):
     while ' ' in chars:
