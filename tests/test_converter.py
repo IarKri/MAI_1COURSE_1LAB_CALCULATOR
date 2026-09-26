@@ -1,6 +1,6 @@
 import pytest
 from src.toolkit.converter import converter
-from src.toolkit.validator import space_cleaning
+# from src.toolkit.validator import space_cleaning
 
 @pytest.mark.parametrize(
     "value, from_unit_to_unit, expected",
@@ -13,14 +13,14 @@ from src.toolkit.validator import space_cleaning
         (1200, "from mm to m", 1.2),
 
         #weight
-        (500, "from g to kg", 0.5),
+        (500, "from g to KG", 0.5),
         (3.42, "from kg to g", 3420.0),
         (1234, "from g to kg", 1.234),
 
         #temperature
-        (20, "from c to k", 293.15),
+        (20, "from C to K", 293.15),
         (286, "from k to f", 55.13),
-        (56, "from f to k", 286.48),
+        (50, "from f to k", 283.15),
         (-25, "from c to f", -13.0),
     ]
 )

@@ -9,10 +9,10 @@ from src.toolkit.errors import temperature_below_absolute_zero
 from src.toolkit.errors import unknown_unit
 from src.toolkit.errors import wrong_convertation_units
 
-def space_cleaning(chars):
-    while '  ' in chars:
-        chars=chars.replace('  ',' ')
-    return chars
+# def space_cleaning(chars):
+#     while '  ' in chars:
+#         chars=chars.replace('  ',' ')
+#     return chars
 
 def initial_calculator_validation(expression):
     if no_operator_between_numbers(expression):
@@ -24,7 +24,7 @@ def initial_calculator_validation(expression):
     if several_operators(expression):
         raise ValueError("Incorrect operation")
     if division_by_zero(expression):
-        raise ZeroDivisionError("Division by 0")
+        raise ZeroDivisionError("Division by zero")
     return False
 
 def initial_converter_validation(expression):

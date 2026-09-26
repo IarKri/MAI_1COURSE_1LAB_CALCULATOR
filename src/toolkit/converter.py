@@ -20,6 +20,7 @@ def converter(value, from_unit_to_unit):
                     "from kg to g": ('*',1000)
                     }
 
+    from_unit_to_unit = from_unit_to_unit.lower()
     if from_unit_to_unit in dict_of_units:
         return (value/float(dict_of_units[from_unit_to_unit][1])) \
             if dict_of_units[from_unit_to_unit][0] == '/' \

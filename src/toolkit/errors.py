@@ -1,5 +1,8 @@
+from src.toolkit.tokenizer import tokenize
+
+
 def division_by_zero(chars):
-    if '/0' in chars:
+    if '/0' in chars or '//0' in chars:
         return True
     return False
 
@@ -14,17 +17,20 @@ def incorrect_float(chars):
     return False
 
 def several_operators(chars):
+    chars=tokenize(chars)
     for char in range(len(chars)-1):
-        return((chars[char] in ['+', '-', '*', '/', '//', '%'] and \
-            chars[char+1] in ['*', '/', '//', '%']) or \
-                (chars[char] in ['*', '/', '//', '%'] and chars[char+1] in ['+', '-', '*', '/', '//', '%']))
+        if chars[char][1]=="OPERATOR" and chars[char+1][1]=="OPERATOR":
+            if (chars[char][0] not in ["+", "-"] or chars[char][0] not in ["+", "-"]):
+                return True
+    return False
 
 def no_operator_between_numbers(chars):
-    while ' ' in chars:
-        chars=chars.replace(' ','')
-    if all(chars[char] in '0123456789' and chars[char+1] == ' ' and \
-           chars[char+2] in '0123456789' for char in range(len(chars) - 2)):
-        return True
+    while '  ' in chars:
+        chars=chars.replace('  ',' ')
+    for char in range(len(chars)-2):
+        if (chars[char] in '0123456789' and chars[char+1] == ' ' and \
+            chars[char+2] in '0123456789'):
+            return True
     return False
 
 def first_char_is_operator(chars):
@@ -58,5 +64,7 @@ def temperature_below_absolute_zero(value, from_unit_to_unit):
     if tokens[1] == 'k' and value < 0:
         return True
     return False
+# def incorrect_value_for_converter(value, from_unit_to_unit):
+    
 
 # print(temperature_below_absolute_zero(-300, 'from c to f'))

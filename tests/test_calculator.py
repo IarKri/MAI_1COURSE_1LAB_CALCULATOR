@@ -43,10 +43,6 @@ def test_valid_calculation(expression, expected):
 @pytest.mark.parametrize(
         "expression, error",
     [
-        #Zero_Division
-        ("23/0","Division by 0"),
-        ("25*2/0", "Division by 0"),
-
         #Several_Operators
         ("12/*3", "Incorrect operation"),
         ("34+5//*%3","Incorrect operation"),
@@ -66,13 +62,28 @@ def test_valid_calculation(expression, expected):
         #no_operator_between_numbers
         ("10 3", "No operator between numbers"),
         ("13-4*3 5", "No operator between numbers"),
+        ("2.5*4//2", "Incorrect value for operation with //")
+
+
+        
     ]
 )
+
 def test_invalid_expression(expression, error):
     with pytest.raises(ValueError, match=re.escape(error)):
         initial_calculator_validation(expression)
         calculator(expression)
-def test_invalid_expresiion_zero_division_error(expression, error):
+
+@pytest.mark.parametrize(
+        "expression, error",
+    [
+        #ZeroDivisionError
+        ("23/0", "Division by zero"),
+        ("25*2/0", "Division by zero"),       
+    ]                       
+)
+
+def test_invalid_expresion_zero_division_error(expression, error):
     with pytest.raises(ZeroDivisionError, match=re.escape(error)):
         initial_calculator_validation(expression)
         calculator(expression)

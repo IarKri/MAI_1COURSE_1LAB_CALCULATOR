@@ -12,7 +12,6 @@ def tokenize(chars):
       | (?P<MINUS>-)   
       | (?P<OPERATOR>//|[*/%])
       | (?P<SPACE>\s+)
-      | (?P<FLOAT_ERROR>\d+\.|\.\d+)
       | (?P<MISMATCH>.)
     ''', re.VERBOSE)
 
@@ -23,9 +22,9 @@ def tokenize(chars):
         if kind == 'SPACE':
             continue
         if kind == 'MISMATCH':
+            if '.' in value:
+                raise ValueError("Float type is incorrect")
             raise ValueError("Incorrect character")
-        if kind == "FLOAT_ERROR":
-            raise ValueError("Float type is incorrect")
         tokens.append((value, kind))
     return tokens
 
