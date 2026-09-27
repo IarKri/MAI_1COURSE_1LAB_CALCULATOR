@@ -14,10 +14,10 @@ CLI-калькулятор-конвертер с валидацией выраж
     - веса(g, kg)
     - расстояния(mm, cm, m, km)
     - температуры(c, f, k)
-  
 ## Установка
 
 ```bash
 git clone https://github.com/IarKri/MAI_1COURSE_1LAB_CALCULATOR
 cd lab_01
 pip install -e.
+

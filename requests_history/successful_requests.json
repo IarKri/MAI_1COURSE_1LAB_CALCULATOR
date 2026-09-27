@@ -1198,5 +1198,215 @@
     "expression": "2*-3",
     "result": -6,
     "time": "2026-09-27T23:26:12.379906"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4,
+    "time": "2026-09-27T23:45:01.940871"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14,
+    "time": "2026-09-27T23:45:01.983969"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1,
+    "time": "2026-09-27T23:45:02.014306"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T23:45:02.049363"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2,
+    "time": "2026-09-27T23:45:02.081365"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1,
+    "time": "2026-09-27T23:45:02.120671"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2,
+    "time": "2026-09-27T23:45:02.157089"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4,
+    "time": "2026-09-27T23:46:08.342968"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14,
+    "time": "2026-09-27T23:46:08.427911"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1,
+    "time": "2026-09-27T23:46:08.449065"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T23:46:08.474835"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2,
+    "time": "2026-09-27T23:46:08.503188"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1,
+    "time": "2026-09-27T23:46:08.547510"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2,
+    "time": "2026-09-27T23:46:08.585343"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4,
+    "time": "2026-09-27T23:46:27.804691"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14,
+    "time": "2026-09-27T23:46:27.849044"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1,
+    "time": "2026-09-27T23:46:27.885462"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T23:46:27.911953"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2,
+    "time": "2026-09-27T23:46:27.942068"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1,
+    "time": "2026-09-27T23:46:27.980398"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2,
+    "time": "2026-09-27T23:46:28.023494"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4,
+    "time": "2026-09-27T23:47:01.983248"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14,
+    "time": "2026-09-27T23:47:02.036267"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1,
+    "time": "2026-09-27T23:47:02.080752"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T23:47:02.125210"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2,
+    "time": "2026-09-27T23:47:02.158850"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1,
+    "time": "2026-09-27T23:47:02.195795"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2,
+    "time": "2026-09-27T23:47:02.228406"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4,
+    "time": "2026-09-27T23:47:54.833331"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14,
+    "time": "2026-09-27T23:47:54.840177"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1,
+    "time": "2026-09-27T23:47:54.873828"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T23:47:54.904583"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2,
+    "time": "2026-09-27T23:47:54.926095"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1,
+    "time": "2026-09-27T23:47:54.953157"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2,
+    "time": "2026-09-27T23:47:54.974815"
   }
 ]

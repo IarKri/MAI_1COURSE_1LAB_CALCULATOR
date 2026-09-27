@@ -9,15 +9,16 @@ def calculation(chars):
         chars: математическое выражение
     
     Returns:
-
+        output.pop(): Результат математического выражения
     
-    
-    
-    
+    Raises:
+        ValueError: Неверный тип числа при работе с // и %
     '''
     tokens = shunting_yard(chars)
+
     output=Stack()
     unar_minuses=Stack()
+
     for token in tokens:
         value, kind = token[0], token[1]
         if kind=="NUMBER":
@@ -65,6 +66,3 @@ def calculation(chars):
                 else:
                     raise ValueError("Incorrect value for operation with %")
     return output.pop()
-
-# s='--++  12.0//3+-+--+4//2'
-# print(space_cleaning(s))

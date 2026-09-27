@@ -1,4 +1,17 @@
 def convertation(value, from_unit, to_unit):
+    '''
+    Конвертер величин
+
+    Args:
+        value: величина
+
+        from_unit: единицы измерения величины
+
+        to_unit: единицы измерения, в которые надо перевести величину
+    
+    Returns:
+        result: результат конвертации выражения
+    '''
     from_unit=from_unit.lower()
     to_unit=to_unit.lower()
     if from_unit == to_unit:
@@ -42,7 +55,3 @@ def convertation(value, from_unit, to_unit):
             return (value - 273.15)* 1.8 + 32
         if from_unit_to_unit == "from f to k":
             return (value - 32) / 1.8 + 273.15
-
-
-
-# print(converter(10,'from cm to mm'))

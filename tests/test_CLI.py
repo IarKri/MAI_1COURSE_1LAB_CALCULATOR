@@ -5,19 +5,19 @@ from toolkit.__main__ import main
 def test_calc_simpliest_tests(capsys):
     main(["calc", "1+3"])
     captured = capsys.readouterr()
-    assert captured.out.strip() == '4.0'
+    assert captured.out.strip() == '4'
 
 
 def test_calc_order_of_operations(capsys):
     main(["calc", "2+3*4"])
     captured = capsys.readouterr()
-    assert captured.out.strip() == "14.0"
+    assert captured.out.strip() == "14"
 
 
 def test_calc_spaces(capsys):
     main(["calc", "2  +3- 4"])
     captured = capsys.readouterr()
-    assert captured.out.strip() == "1.0"
+    assert captured.out.strip() == "1"
 
 
 def test_calc_float(capsys):
@@ -29,19 +29,19 @@ def test_calc_float(capsys):
 def test_calc_int_division(capsys):
     main(["calc", "5 // 2"])
     captured = capsys.readouterr()
-    assert captured.out.strip() == "2.0"
+    assert captured.out.strip() == "2"
 
 
 def test_calc_remainder(capsys):
     main(["calc", "5 % 2"])
     captured = capsys.readouterr()
-    assert captured.out.strip() == "1.0"
+    assert captured.out.strip() == "1"
 
 
 def test_calc_unary_minus(capsys):
     main(["calc", "-5 + 3"])
     captured = capsys.readouterr()
-    assert captured.out.strip() == "-2.0"
+    assert captured.out.strip() == "-2"
 
 
 def test_convert_length(capsys):
