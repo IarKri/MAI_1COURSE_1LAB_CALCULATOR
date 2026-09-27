@@ -13,21 +13,28 @@ def calculation(chars):
             if not unar_minuses.is_empty():
                 while not unar_minuses.is_empty():
                     unar_minuses.pop()
-                    value=-float(value)
+                    if value.isdigit():
+                        value=-int(value)
+                    else:
+                        value=-float(value)
                 output.push(value)
             else:
+                if value.isdigit():
+                    value=int(value)
+                else:
+                    value=float(value)
                 output.push(value)
         elif kind=="UNARY_MINUS":
             if not output.is_empty():
-                number_1=-float(output.pop())
+                number_1=-(output.pop())
                 output.push(number_1)
             else:
                 unar_minuses.push(-1)
         elif kind=="UNARY_PLUS":
             pass
         else:
-            number_2=float(output.pop())
-            number_1=float(output.pop())
+            number_2=output.pop()
+            number_1=output.pop()
             if value == '+':
                 output.push(number_1+number_2)
             if value == '-':
@@ -37,12 +44,12 @@ def calculation(chars):
             if value == '/':
                 output.push(number_1/number_2)
             if value == '//':
-                if number_2.is_integer() and number_1.is_integer():
+                if isinstance(number_2, int) and isinstance(number_1, int):
                     output.push(number_1//number_2)
                 else:
-                    raise ValueError("Incorrect value for operation with //")
+                    raise ValueError("Incorrect ope")
             if value == '%':
-                if number_2.is_integer() and number_1.is_integer():
+                if isinstance(number_2, int) and isinstance(number_1, int):
                     output.push(number_1%number_2)
                 else:
                     raise ValueError("Incorrect value for operation wittn %")

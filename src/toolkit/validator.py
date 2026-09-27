@@ -16,8 +16,9 @@ def incorrect_float(chars):
     return False
 
 def several_operators(chars):
+    chars=tokenize(chars)
     for char in range(len(chars)-1):
-        if chars[char] in ['-','+','*','/','//','%'] and chars[char+1] in ['-','+','*','/','//','%'] :
+        if chars[char][0] in ['-','+','*','/','//','%'] and chars[char+1][0] in ['-','+','*','/','//','%'] :
             return True
     return False
 
@@ -82,8 +83,6 @@ def initial_calculation_validation(expression):
     return False
 
 def initial_convertation_validation(value, from_unit, to_unit):
-    from_unit=from_unit.lower()
-    to_unit=to_unit.lower()
     if unknown_unit(from_unit, to_unit):
         raise ValueError("Unknown Unit")
     if wrong_convertation_units(from_unit, to_unit):

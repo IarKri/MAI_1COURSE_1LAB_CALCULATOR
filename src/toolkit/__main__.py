@@ -95,6 +95,8 @@ def calculator(expression):
         sys.exit(2)
 
 def converter(value, from_unit, to_unit):
+    from_unit=from_unit.lower()
+    to_unit=to_unit.lower()
     try:
         initial_convertation_validation(value, from_unit,to_unit)
         result=convertation(value, from_unit, to_unit)

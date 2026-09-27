@@ -1,6 +1,7 @@
 def convertation(value, from_unit, to_unit):
+    if from_unit == to_unit:
+        return value
     from_unit_to_unit=f"from {from_unit} to {to_unit}"
-    from_unit_to_unit = from_unit_to_unit.lower()
     dict_of_units ={
                     #length
                     "from mm to cm": ('/',10),
