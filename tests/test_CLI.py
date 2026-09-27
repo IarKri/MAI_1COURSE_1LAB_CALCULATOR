@@ -54,11 +54,11 @@ def test_convert_length(capsys):
 def test_convert_weight(capsys):
     main(["convert", "1000", "--from", "g", "--to", "kg"])
     captured = capsys.readouterr()
-    assert captured.out.strip() == "1"
+    assert captured.out.strip() == "1.0"
 
 
 def test_convert_temperature(capsys):
-    main(["convert", "25", "--from", "c", "--to", "л"])
+    main(["convert", "25", "--from", "c", "--to", "k"])
     captured = capsys.readouterr()
     assert captured.out.strip() == "298.15"
 

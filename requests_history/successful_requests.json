@@ -460,5 +460,101 @@
     "expression": "-5 + 3",
     "result": -2.0,
     "time": "2026-09-27T21:54:12.117733"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4.0,
+    "time": "2026-09-27T21:59:04.898855"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14.0,
+    "time": "2026-09-27T21:59:04.901985"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1.0,
+    "time": "2026-09-27T21:59:04.931152"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T21:59:04.959650"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1.0,
+    "time": "2026-09-27T21:59:05.035243"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2.0,
+    "time": "2026-09-27T21:59:05.053068"
+  },
+  {
+    "type": "convertation",
+    "value": "10.0m",
+    "converted_value": "1000.0cm",
+    "time": "2026-09-27T22:05:41.618855"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4.0,
+    "time": "2026-09-27T22:06:00.835818"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14.0,
+    "time": "2026-09-27T22:06:00.838789"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1.0,
+    "time": "2026-09-27T22:06:00.865558"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T22:06:00.880445"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1.0,
+    "time": "2026-09-27T22:06:00.952449"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2.0,
+    "time": "2026-09-27T22:06:00.987948"
+  },
+  {
+    "type": "convertation",
+    "value": "150.0cm",
+    "converted_value": "1.5m",
+    "time": "2026-09-27T22:06:01.012158"
+  },
+  {
+    "type": "convertation",
+    "value": "1000.0g",
+    "converted_value": "1.0kg",
+    "time": "2026-09-27T22:06:01.049834"
+  },
+  {
+    "type": "convertation",
+    "value": "25.0c",
+    "converted_value": "298.15k",
+    "time": "2026-09-27T22:06:01.096531"
   }
 ]

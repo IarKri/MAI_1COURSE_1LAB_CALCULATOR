@@ -22,9 +22,9 @@ def convertation(value, from_unit, to_unit):
                     }
     
     if from_unit_to_unit in dict_of_units:
-        return (value/float(dict_of_units[from_unit_to_unit][1])) \
+        return (value/(dict_of_units[from_unit_to_unit][1])) \
             if dict_of_units[from_unit_to_unit][0] == '/' \
-                else (value*float(dict_of_units[from_unit_to_unit][1]))
+                else (value*(dict_of_units[from_unit_to_unit][1]))
     else:
         #temperature
         if from_unit_to_unit == "from c to f":

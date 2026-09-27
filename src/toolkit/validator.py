@@ -81,14 +81,14 @@ def initial_calculation_validation(expression):
         raise ZeroDivisionError("Division by zero")
     return False
 
-def initial_convertation_validation(from_unit, to_unit):
+def initial_convertation_validation(value, from_unit, to_unit):
     from_unit=from_unit.lower()
     to_unit=to_unit.lower()
     if unknown_unit(from_unit, to_unit):
         raise ValueError("Unknown Unit")
     if wrong_convertation_units(from_unit, to_unit):
         raise ValueError("Different type of Units")
-    if temperature_below_absolute_zero(from_unit, to_unit):
+    if temperature_below_absolute_zero(value, from_unit):
         raise ValueError("Below absolute zero")
     return False
     

@@ -96,7 +96,7 @@ def calculator(expression):
 
 def converter(value, from_unit, to_unit):
     try:
-        initial_convertation_validation(from_unit,to_unit)
+        initial_convertation_validation(value, from_unit,to_unit)
         result=convertation(value, from_unit, to_unit)
         print(result)
         converter_dump(value, from_unit, to_unit, result)
@@ -109,7 +109,7 @@ def main(argv=None):
     if args.subcommand=="calc":
         calculator(args.expression)
     elif args.subcommand=="convert":
-        converter(args.value, args.from_unit, args.to_unit)
+        converter(float(args.value), args.from_unit, args.to_unit)
 
 if __name__=="__main__":
     main()
