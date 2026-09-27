@@ -25,8 +25,6 @@ def several_operators(chars):
     return False
 
 def no_operator_between_numbers(chars):
-    while '  ' in chars:
-        chars=chars.replace('  ',' ')
     for char in range(len(chars)-2):
         if (chars[char] in '0123456789' and chars[char+1] == ' ' and \
             chars[char+2] in '0123456789'):

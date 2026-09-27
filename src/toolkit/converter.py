@@ -1,5 +1,6 @@
-from src.toolkit.validator import initial_converter_validation
-def converter(value, from_unit_to_unit):
+def convertation(value, from_unit, to_unit):
+    from_unit_to_unit=f"from {from_unit} to {to_unit}"
+    from_unit_to_unit = from_unit_to_unit.lower()
     dict_of_units ={
                     #length
                     "from mm to cm": ('/',10),
@@ -19,8 +20,7 @@ def converter(value, from_unit_to_unit):
                     "from g to kg": ('/',1000),
                     "from kg to g": ('*',1000)
                     }
-
-    from_unit_to_unit = from_unit_to_unit.lower()
+    
     if from_unit_to_unit in dict_of_units:
         return (value/float(dict_of_units[from_unit_to_unit][1])) \
             if dict_of_units[from_unit_to_unit][0] == '/' \

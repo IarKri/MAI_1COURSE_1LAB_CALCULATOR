@@ -1,10 +1,11 @@
 from src.toolkit.tokenizer import shunting_yard
 from src.toolkit.classes import Stack
 from src.toolkit.errors import several_operators
-from src.toolkit.validator import initial_calculator_validation
+from src.toolkit.validator import initial_calculation_validation
 
 
-def calculator(chars):
+
+def calculation(chars):
     tokens = shunting_yard(chars)
     output=Stack()
     unar_minuses=Stack()

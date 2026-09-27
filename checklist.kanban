@@ -32,9 +32,27 @@
           "comments": []
         },
         {
-          "id": "48365bfd-daf9-44b6-a1c7-921e244004d2",
+          "id": "3f946b9b-fd40-4077-89d3-20c6ee7a33e1",
           "listId": "1059eb2b-afb6-4531-a56d-aee29787bc85",
-          "title": "tests",
+          "title": "errors classes",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "2efaec2f-886a-473e-909e-d38ca7bcae78",
+          "listId": "1059eb2b-afb6-4531-a56d-aee29787bc85",
+          "title": "int -> int output",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "3272aed8-7cf6-4127-817d-44c71b967a47",
+          "listId": "1059eb2b-afb6-4531-a56d-aee29787bc85",
+          "title": "float -> float.output",
           "description": "",
           "labels": [],
           "checkboxes": [],
@@ -64,6 +82,15 @@
           "id": "5e0b4913-4adf-47a3-a9e5-2932f1f040f6",
           "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
           "title": "Patch for integers with // %",
+          "description": "",
+          "labels": [],
+          "checkboxes": [],
+          "comments": []
+        },
+        {
+          "id": "15debb00-d212-4a50-9d03-1e6aa76cbf5f",
+          "listId": "48fa5e82-07f7-46e1-8b17-8bf9e3293e52",
+          "title": "tests",
           "description": "",
           "labels": [],
           "checkboxes": [],

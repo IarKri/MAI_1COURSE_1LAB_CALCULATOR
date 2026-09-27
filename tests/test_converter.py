@@ -1,5 +1,5 @@
 import pytest
-from src.toolkit.converter import converter
+from src.toolkit.converter import convertation
 # from src.toolkit.validator import space_cleaning
 
 @pytest.mark.parametrize(
@@ -25,7 +25,7 @@ from src.toolkit.converter import converter
     ]
 )
 
-def test_valid_converter(value, from_unit_to_unit, expected):
-    assert converter(value, from_unit_to_unit) == pytest.approx(expected)
+def test_valid_convertion(value, from_unit_to_unit, expected):
+    assert convertation(value, from_unit_to_unit) == pytest.approx(expected)
 
 

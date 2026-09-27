@@ -1,7 +1,7 @@
 import pytest
 import re
-from src.toolkit.calculator import calculator
-from src.toolkit.validator import initial_calculator_validation
+from src.toolkit.calculator import calculation
+from src.toolkit.validator import initial_calculation_validation
 from src.toolkit.tokenizer import tokenize
 
 @pytest.mark.parametrize(
@@ -38,7 +38,7 @@ from src.toolkit.tokenizer import tokenize
     ]
 )
 def test_valid_calculation(expression, expected):
-    assert calculator(expression) == pytest.approx(expected)
+    assert calculation(expression) == pytest.approx(expected)
 
 @pytest.mark.parametrize(
         "expression, error",
@@ -71,8 +71,8 @@ def test_valid_calculation(expression, expected):
 
 def test_invalid_expression(expression, error):
     with pytest.raises(ValueError, match=re.escape(error)):
-        initial_calculator_validation(expression)
-        calculator(expression)
+        initial_calculation_validation(expression)
+        calculation(expression)
 
 @pytest.mark.parametrize(
         "expression, error",
@@ -85,6 +85,6 @@ def test_invalid_expression(expression, error):
 
 def test_invalid_expresion_zero_division_error(expression, error):
     with pytest.raises(ZeroDivisionError, match=re.escape(error)):
-        initial_calculator_validation(expression)
-        calculator(expression)
+        initial_calculation_validation(expression)
+        calculation(expression)
    

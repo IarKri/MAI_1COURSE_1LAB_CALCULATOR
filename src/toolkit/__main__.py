@@ -2,78 +2,112 @@ import argparse
 import re
 import sys
 
-from src.toolkit.calculator import calculator
-from src.toolkit.validator import initial_calculator_validation, initial_converter_validation
-from src.toolkit.converter import converter
-from src.toolkit.json_dump import  calculator_dump
+from src.toolkit.calculator import calculation
+from src.toolkit.validator import initial_calculation_validation, initial_convertation_validation, space_cleaner
+from src.toolkit.converter import convertation
+from src.toolkit.json_dump import  calculator_dump, converter_dump
 
-def main():
+
+
+
+##################
+def parser(argv=None):
+    format = argparse.RawTextHelpFormatter
     parser=argparse.ArgumentParser(
         prog="toolkit",
-        description="Calculator-converter"
+        description="Calculator-Converter",
+        epilog=(""
+        ""
+        ),
+        formatter_class=format
     )
 
-    commands = parser.add_subparsers(dest="command")
+    subparser=parser.add_subparsers(
+        dest="subcommand",
+        required=True,
+        title='',
+        metavar=''
+    )
 
-    parse_calc = commands.add_parser(
+    calculator=subparser.add_parser(
         "calc",
-        description="Calculator",
+        description="",
+        epilog=(""
+        ""
+        ),
+        help="",
+        formatter_class=format
     )
 
-    parse_calc.add_argument("expression")
-
-    parse_convert = commands.add_parser(
+    converter=subparser.add_parser(
         "convert",
-        description= "Converter",
+        description='',
+        epilog=(""
+        ""
+        ),
+        help="",
+        formatter_class=format
     )
-    parse_convert.add_argument("value")
-    parse_convert.add_argument("--from", required="True")
-    parse_convert.add_argument("--to", dest="to_unit", required="True")
 
+    calculator.add_argument(
+        "expression",
+        help=""
+    )
 
-    args = parser.parse_args()
+    converter.add_argument(
+        "value",
+        help=""
+    )
 
-    if args.command == "calc":
+    converter.add_argument(
+        "--from",
+        dest="from_unit",
+        required=True,
+        help=""
+    )
 
-        expr = args.expression
+    converter.add_argument(
+        "--to",
+        dest="to_unit",
+        required=True,
+        help=""
+    )
 
+    return parser.parse_args(argv)
 
-        compressed_expression = compress(expr)
-        initial_validation_calc(compressed_expression)
-        tokenized_expression = tokenize(compressed_expression)
-        validation_calc(tokenized_expression)
-        rpn_expression = shunting_yard(tokenized_expression)
-        calculated_expression = calculate(rpn_expression)
-
-        print(calculated_expression)
-        calc_dump(expr, calculated_expression)
-        sys.exit(0)
-    elif args.command == "convert":
-        
-        try:
-            value = float(args.value)
-        except ValueError:
-            raise InvalidValueError(args.value)
-        from_unit = args.from_unit
-        to_unit =  args.to_unit
-
-        # Основной блок
-        validation_convert(value, from_unit, to_unit)  # Валидация
-        converted_value = convert(value, from_unit, to_unit)  # Перевод величин
-
-        print(converted_value)  # Итоговый вывод
-        convert_dump(value, converted_value, from_unit, to_unit)  # Выгрузка успешного запуска
-        sys.exit(0)  # Успешное завершение программы
-
-if __name__ == "__main__":
+def calculator(expression):
     try:
-        main()
-    except CalculatorError as error:
-        print(f"Expected Error: {error}", file=sys.stderr)
+        expression=space_cleaner(expression)
+        initial_calculation_validation(expression)
+        result=calculation(expression)
+        calculator_dump(expression, result)
+        print(result)
+    except ValueError as error:
+        print(f"{error}", file=sys.stderr)
         sys.exit(2)
-    except ConverterError as error:
-        print(f"Expected Error: {error}", file=sys.stderr)
+    except ZeroDivisionError as error:
+        print(f"{error}", file=sys.stderr)
         sys.exit(2)
     except Exception as error:
-        print(f"UnexpectedError: {error}", file=sys.stderr)
+        print(f"Unknown Error {error}", file=sys.stderr)
         sys.exit(2)
+
+def converter(value, from_unit, to_unit):
+    try:
+        initial_calculation_validation(from_unit,to_unit)
+        result=convertation(value, from_unit, to_unit)
+        print(result)
+        converter_dump(value, from_unit, to_unit, result)
+    except ValueError as error:
+        print("", file=sys.stderr)
+        sys.exit(2)
+
+def main(argv=None):
+    args=parser(argv)
+    if args.subcommand=="calc":
+        calculator(args.expression)
+    elif args.subcommand=="convert":
+        converter(args.value, args.from_unit, args.to_unit)
+
+if __name__=="__main__":
+    main()

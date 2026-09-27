@@ -9,12 +9,13 @@ from src.toolkit.errors import temperature_below_absolute_zero
 from src.toolkit.errors import unknown_unit
 from src.toolkit.errors import wrong_convertation_units
 
-# def space_cleaning(chars):
-#     while '  ' in chars:
-#         chars=chars.replace('  ',' ')
-#     return chars
 
-def initial_calculator_validation(expression):
+def space_cleaner(chars):
+    while '  ' in chars:
+        chars=chars.replace('  ', ' ')
+    return chars
+
+def initial_calculation_validation(expression):
     if no_operator_between_numbers(expression):
         raise ValueError("No operator between numbers")
     if first_char_is_operator(expression):
@@ -27,7 +28,9 @@ def initial_calculator_validation(expression):
         raise ZeroDivisionError("Division by zero")
     return False
 
-def initial_converter_validation(expression):
+def initial_convertation_validation(from_unit, to_unit):
+    from_unit_to_unit=f"from {from_unit} to {to_unit}"
+    expression = from_unit_to_unit.lower()
     if unknown_unit(expression):
         raise ValueError("Unknown Unit")
     if wrong_convertation_units(expression):

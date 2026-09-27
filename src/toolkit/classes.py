@@ -1,4 +1,5 @@
 #initializing_class_stack
+
 class Stack:
     def __init__(self):
         self.items = []
@@ -18,3 +19,4 @@ class Stack:
 
     def size(self):
         return len(self.items)
+
