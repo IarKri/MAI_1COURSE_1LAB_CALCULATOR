@@ -1,8 +1,18 @@
 import re
-from src.toolkit.classes import Stack
+from .classes import Stack
 
-#tokenizing
 def tokenize(chars):
+    '''
+    Разбивает выражение на типизированные токены
+
+    Args:
+        chars: 
+            Математическое выражение, которое необходимо посчитать
+    
+    Returns:
+        tokens:
+            Набор типизированных токенов
+    '''
     tokens=[]
 
     #pattern
@@ -28,8 +38,18 @@ def tokenize(chars):
         tokens.append((value, kind))
     return tokens
 
-#transforming_to_RPN
 def shunting_yard(tokens):
+    '''
+    Алгоритм, формирующий ОПЗ из набора типизированных токенов и выявляющий унарные минусы и плюсы
+    
+    Args:
+        tokens:
+            Набор типизированных токенов
+    
+    Returns:
+        output:
+            Массив из типизированных токенов в формате ОПЗ
+    '''
     tokens=tokenize(tokens)
     for char in range(len(tokens)):
         if (tokens[char][1] == "MINUS" or tokens[char][1] == "PLUS") and \
@@ -54,8 +74,3 @@ def shunting_yard(tokens):
     while not operators.is_empty():
         output.append(operators.pop())
     return output
-
-# s='5+.3'
-# print(tokenize(s))
-
-

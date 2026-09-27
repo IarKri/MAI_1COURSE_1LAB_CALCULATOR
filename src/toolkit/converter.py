@@ -1,4 +1,6 @@
 def convertation(value, from_unit, to_unit):
+    from_unit=from_unit.lower()
+    to_unit=to_unit.lower()
     if from_unit == to_unit:
         return value
     from_unit_to_unit=f"from {from_unit} to {to_unit}"

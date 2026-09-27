@@ -1,10 +1,8 @@
 import sys
-
 import pytest
 from toolkit.__main__ import main
 
 def test_calc_simpliest_tests(capsys):
-
     main(["calc", "1+3"])
     captured = capsys.readouterr()
     assert captured.out.strip() == '4.0'

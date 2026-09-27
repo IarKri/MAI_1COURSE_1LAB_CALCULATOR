@@ -1,8 +1,10 @@
-from src.toolkit.tokenizer import tokenize
+from .tokenizer import tokenize
 
 def division_by_zero(chars):
-    if '/0' in chars or '//0' in chars:
-        return True
+    chars=tokenize(chars)
+    for char in range(len(chars)-1):
+        if (chars[char][0] == '/' or chars[char][0] == '//' or chars[char][0] == '%') and chars[char+1][0] == "0":
+            return True
     return False
 
 def no_number_after_operator(chars):
@@ -18,8 +20,9 @@ def incorrect_float(chars):
 def several_operators(chars):
     chars=tokenize(chars)
     for char in range(len(chars)-1):
-        if chars[char][0] in ['-','+','*','/','//','%'] and chars[char+1][0] in ['-','+','*','/','//','%'] :
-            return True
+        if chars[char][1] in "OPERATOR" and chars[char+1][1] in "OPERATOR":
+            if chars[char][0] not in ['-', '+'] or chars[char+1][0] not in ['-', '+']:
+                return True
     return False
 
 def no_operator_between_numbers(chars):
@@ -65,9 +68,15 @@ def space_cleaner(chars):
 
 def operators_formatter(chars):
     while "++" in chars or "--" in chars:
-        chars=chars.replace("++", "+").replace("--", "-")
+        chars=chars.replace("++", "+").replace("--", "+")
     return chars
 
+def value_validation(value):
+    value=str(value)
+    for char in value:
+        if char not in '0123456789.':
+            return True
+    return False
 
 def initial_calculation_validation(expression):
     if no_operator_between_numbers(expression):
@@ -89,6 +98,8 @@ def initial_convertation_validation(value, from_unit, to_unit):
         raise ValueError("Different type of Units")
     if temperature_below_absolute_zero(value, from_unit):
         raise ValueError("Below absolute zero")
+    if value_validation(value):
+        raise ValueError("Incorrect value")
     return False
     
 

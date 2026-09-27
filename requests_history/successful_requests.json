@@ -742,5 +742,461 @@
     "value": "25.0c",
     "converted_value": "298.15k",
     "time": "2026-09-27T22:23:41.265750"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4.0,
+    "time": "2026-09-27T22:28:49.964394"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14.0,
+    "time": "2026-09-27T22:28:49.970925"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1.0,
+    "time": "2026-09-27T22:28:49.995923"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T22:28:50.026321"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2.0,
+    "time": "2026-09-27T22:28:50.064849"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1.0,
+    "time": "2026-09-27T22:28:50.098144"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2.0,
+    "time": "2026-09-27T22:28:50.130750"
+  },
+  {
+    "type": "convertation",
+    "value": "150.0cm",
+    "converted_value": "1.5m",
+    "time": "2026-09-27T22:28:50.162925"
+  },
+  {
+    "type": "convertation",
+    "value": "1000.0g",
+    "converted_value": "1.0kg",
+    "time": "2026-09-27T22:28:50.185827"
+  },
+  {
+    "type": "convertation",
+    "value": "25.0c",
+    "converted_value": "298.15k",
+    "time": "2026-09-27T22:28:50.223422"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4.0,
+    "time": "2026-09-27T22:30:05.925792"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14.0,
+    "time": "2026-09-27T22:30:05.929179"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1.0,
+    "time": "2026-09-27T22:30:05.946416"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T22:30:05.971472"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2.0,
+    "time": "2026-09-27T22:30:05.996126"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1.0,
+    "time": "2026-09-27T22:30:06.022385"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2.0,
+    "time": "2026-09-27T22:30:06.049048"
+  },
+  {
+    "type": "convertation",
+    "value": "150.0cm",
+    "converted_value": "1.5m",
+    "time": "2026-09-27T22:30:06.080750"
+  },
+  {
+    "type": "convertation",
+    "value": "1000.0g",
+    "converted_value": "1.0kg",
+    "time": "2026-09-27T22:30:06.105250"
+  },
+  {
+    "type": "convertation",
+    "value": "25.0c",
+    "converted_value": "298.15k",
+    "time": "2026-09-27T22:30:06.136043"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4.0,
+    "time": "2026-09-27T22:30:29.045987"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14.0,
+    "time": "2026-09-27T22:30:29.055604"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1.0,
+    "time": "2026-09-27T22:30:29.087935"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T22:30:29.121910"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2.0,
+    "time": "2026-09-27T22:30:29.159133"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1.0,
+    "time": "2026-09-27T22:30:29.196219"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2.0,
+    "time": "2026-09-27T22:30:29.229698"
+  },
+  {
+    "type": "convertation",
+    "value": "150.0cm",
+    "converted_value": "1.5m",
+    "time": "2026-09-27T22:30:29.264013"
+  },
+  {
+    "type": "convertation",
+    "value": "1000.0g",
+    "converted_value": "1.0kg",
+    "time": "2026-09-27T22:30:29.291745"
+  },
+  {
+    "type": "convertation",
+    "value": "25.0c",
+    "converted_value": "298.15k",
+    "time": "2026-09-27T22:30:29.325290"
+  },
+  {
+    "type": "convertation",
+    "value": "20.0c",
+    "converted_value": "293.15k",
+    "time": "2026-09-27T22:31:14.497693"
+  },
+  {
+    "type": "convertation",
+    "value": "20.0c",
+    "converted_value": "293.15k",
+    "time": "2026-09-27T22:31:23.103111"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4.0,
+    "time": "2026-09-27T22:31:25.906842"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14.0,
+    "time": "2026-09-27T22:31:25.917239"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1.0,
+    "time": "2026-09-27T22:31:25.956121"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T22:31:25.991906"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2.0,
+    "time": "2026-09-27T22:31:26.024884"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1.0,
+    "time": "2026-09-27T22:31:26.056512"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2.0,
+    "time": "2026-09-27T22:31:26.085044"
+  },
+  {
+    "type": "convertation",
+    "value": "150.0cm",
+    "converted_value": "1.5m",
+    "time": "2026-09-27T22:31:26.119489"
+  },
+  {
+    "type": "convertation",
+    "value": "1000.0g",
+    "converted_value": "1.0kg",
+    "time": "2026-09-27T22:31:26.148999"
+  },
+  {
+    "type": "convertation",
+    "value": "25.0c",
+    "converted_value": "298.15k",
+    "time": "2026-09-27T22:31:26.181870"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4.0,
+    "time": "2026-09-27T22:32:16.883772"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14.0,
+    "time": "2026-09-27T22:32:16.888171"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1.0,
+    "time": "2026-09-27T22:32:16.914395"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T22:32:16.937851"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2.0,
+    "time": "2026-09-27T22:32:16.961837"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1.0,
+    "time": "2026-09-27T22:32:16.992774"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2.0,
+    "time": "2026-09-27T22:32:17.026826"
+  },
+  {
+    "type": "convertation",
+    "value": "150.0cm",
+    "converted_value": "1.5m",
+    "time": "2026-09-27T22:32:17.080205"
+  },
+  {
+    "type": "convertation",
+    "value": "1000.0g",
+    "converted_value": "1.0kg",
+    "time": "2026-09-27T22:32:17.117608"
+  },
+  {
+    "type": "convertation",
+    "value": "25.0c",
+    "converted_value": "298.15k",
+    "time": "2026-09-27T22:32:17.149350"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4.0,
+    "time": "2026-09-27T22:32:34.758345"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14.0,
+    "time": "2026-09-27T22:32:34.775031"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1.0,
+    "time": "2026-09-27T22:32:34.849317"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T22:32:34.907444"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2.0,
+    "time": "2026-09-27T22:32:35.023765"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1.0,
+    "time": "2026-09-27T22:32:35.050374"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2.0,
+    "time": "2026-09-27T22:32:35.086083"
+  },
+  {
+    "type": "convertation",
+    "value": "150.0cm",
+    "converted_value": "1.5m",
+    "time": "2026-09-27T22:32:35.118302"
+  },
+  {
+    "type": "convertation",
+    "value": "1000.0g",
+    "converted_value": "1.0kg",
+    "time": "2026-09-27T22:32:35.142028"
+  },
+  {
+    "type": "convertation",
+    "value": "25.0c",
+    "converted_value": "298.15k",
+    "time": "2026-09-27T22:32:35.176755"
+  },
+  {
+    "type": "calculation",
+    "expression": "1+3",
+    "result": 4.0,
+    "time": "2026-09-27T22:34:00.816973"
+  },
+  {
+    "type": "calculation",
+    "expression": "2+3*4",
+    "result": 14.0,
+    "time": "2026-09-27T22:34:00.827817"
+  },
+  {
+    "type": "calculation",
+    "expression": "2 +3- 4",
+    "result": 1.0,
+    "time": "2026-09-27T22:34:00.889793"
+  },
+  {
+    "type": "calculation",
+    "expression": "1.4 + 3.5",
+    "result": 4.9,
+    "time": "2026-09-27T22:34:00.958347"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 // 2",
+    "result": 2.0,
+    "time": "2026-09-27T22:34:01.033629"
+  },
+  {
+    "type": "calculation",
+    "expression": "5 % 2",
+    "result": 1.0,
+    "time": "2026-09-27T22:34:01.068013"
+  },
+  {
+    "type": "calculation",
+    "expression": "-5 + 3",
+    "result": -2.0,
+    "time": "2026-09-27T22:34:01.101201"
+  },
+  {
+    "type": "convertation",
+    "value": "150.0cm",
+    "converted_value": "1.5m",
+    "time": "2026-09-27T22:34:01.162931"
+  },
+  {
+    "type": "convertation",
+    "value": "1000.0g",
+    "converted_value": "1.0kg",
+    "time": "2026-09-27T22:34:01.220622"
+  },
+  {
+    "type": "convertation",
+    "value": "25.0c",
+    "converted_value": "298.15k",
+    "time": "2026-09-27T22:34:01.293583"
+  },
+  {
+    "type": "calculation",
+    "expression": "2*-3",
+    "result": -6.0,
+    "time": "2026-09-27T22:39:23.752952"
+  },
+  {
+    "type": "calculation",
+    "expression": "5/0.5",
+    "result": 10.0,
+    "time": "2026-09-27T22:42:45.374247"
+  },
+  {
+    "type": "calculation",
+    "expression": "2*-3",
+    "result": -6.0,
+    "time": "2026-09-27T23:26:05.044583"
+  },
+  {
+    "type": "calculation",
+    "expression": "2*-3",
+    "result": -6,
+    "time": "2026-09-27T23:26:12.379906"
   }
 ]

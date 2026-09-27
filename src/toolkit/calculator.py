@@ -1,9 +1,20 @@
-from src.toolkit.tokenizer import shunting_yard
-from src.toolkit.classes import Stack
-
-
+from .tokenizer import shunting_yard
+from .classes import Stack
 
 def calculation(chars):
+    '''
+    Калькулятор математических выражений
+
+    Args:
+        chars: математическое выражение
+    
+    Returns:
+
+    
+    
+    
+    
+    '''
     tokens = shunting_yard(chars)
     output=Stack()
     unar_minuses=Stack()
@@ -47,13 +58,13 @@ def calculation(chars):
                 if isinstance(number_2, int) and isinstance(number_1, int):
                     output.push(number_1//number_2)
                 else:
-                    raise ValueError("Incorrect ope")
+                    raise ValueError("Incorrect value for operation with //")
             if value == '%':
                 if isinstance(number_2, int) and isinstance(number_1, int):
                     output.push(number_1%number_2)
                 else:
-                    raise ValueError("Incorrect value for operation wittn %")
-    return float(output.pop())
+                    raise ValueError("Incorrect value for operation with %")
+    return output.pop()
 
 # s='--++  12.0//3+-+--+4//2'
 # print(space_cleaning(s))
