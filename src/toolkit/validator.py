@@ -1,19 +1,72 @@
 from src.toolkit.tokenizer import tokenize
-from src.toolkit.errors import several_operators
-from src.toolkit.errors import no_operator_between_numbers
-from src.toolkit.errors import first_char_is_operator
-from src.toolkit.errors import no_number_after_operator
-from src.toolkit.errors import division_by_zero
-from src.toolkit.errors import incorrect_float
-from src.toolkit.errors import temperature_below_absolute_zero
-from src.toolkit.errors import unknown_unit
-from src.toolkit.errors import wrong_convertation_units
 
+def division_by_zero(chars):
+    if '/0' in chars or '//0' in chars:
+        return True
+    return False
+
+def no_number_after_operator(chars):
+    if chars[-1] in ['-','+','*','/','//','%']:
+        return True
+    return False
+
+def incorrect_float(chars):
+    if any(f' .{char}' in chars or f'{char}. ' in chars for char in '0123456789'):
+        return True
+    return False
+
+def several_operators(chars):
+    for char in range(len(chars)-1):
+        if chars[char] in ['-','+','*','/','//','%'] and chars[char+1] in ['-','+','*','/','//','%'] :
+            return True
+    return False
+
+def no_operator_between_numbers(chars):
+    for char in range(len(chars)-2):
+        if (chars[char] in '0123456789' and chars[char+1] == ' ' and \
+            chars[char+2] in '0123456789'):
+            return True
+    return False
+
+def first_char_is_operator(chars):
+    if chars[0] in ['*', '/', '//', '%']:
+        return True
+    return False
+
+def unknown_unit(from_unit, to_unit):
+    if from_unit not in ['cm', 'mm', 'm', 'km', 'c', 'f', 'k', 'kg', 'g'] or \
+    to_unit not in ['cm', 'mm', 'm', 'km', 'c', 'f', 'k', 'kg', 'g']:
+        return True
+    return False
+
+def wrong_convertation_units(from_unit, to_unit):
+    if from_unit in ['cm', 'mm', 'm', 'km'] and to_unit not in ['cm', 'mm', 'm', 'km']:
+        return True
+    if from_unit in ['c', 'f', 'k'] and to_unit not in ['c', 'f', 'k']:
+        return True
+    if from_unit in ['kg', 'g'] and to_unit not in ['kg', 'g']:
+        return True
+    return False
+
+def temperature_below_absolute_zero(value, from_unit):
+    if from_unit == 'c' and value < -273.15:
+        return True
+    if from_unit == 'f' and value < -459.67:
+        return True
+    if from_unit == 'k' and value < 0:
+        return True
+    return False
 
 def space_cleaner(chars):
     while '  ' in chars:
         chars=chars.replace('  ', ' ')
     return chars
+
+def operators_formatter(chars):
+    while "++" in chars or "--" in chars:
+        chars=chars.replace("++", "+").replace("--", "-")
+    return chars
+
 
 def initial_calculation_validation(expression):
     if no_operator_between_numbers(expression):
@@ -29,13 +82,13 @@ def initial_calculation_validation(expression):
     return False
 
 def initial_convertation_validation(from_unit, to_unit):
-    from_unit_to_unit=f"from {from_unit} to {to_unit}"
-    expression = from_unit_to_unit.lower()
-    if unknown_unit(expression):
+    from_unit=from_unit.lower()
+    to_unit=to_unit.lower()
+    if unknown_unit(from_unit, to_unit):
         raise ValueError("Unknown Unit")
-    if wrong_convertation_units(expression):
+    if wrong_convertation_units(from_unit, to_unit):
         raise ValueError("Different type of Units")
-    if temperature_below_absolute_zero(expression):
+    if temperature_below_absolute_zero(from_unit, to_unit):
         raise ValueError("Below absolute zero")
     return False
     

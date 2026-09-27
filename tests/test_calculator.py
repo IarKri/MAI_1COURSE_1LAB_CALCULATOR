@@ -29,7 +29,7 @@ from src.toolkit.tokenizer import tokenize
         ('1 + 2', 3.0),
         ('  -12+ 2 ', -10.0),
 
-        #rational numbers
+        #float numbers
         ("3.6-2.5", 1.1),
         ("2.5*6/7.5", 2.0),
 

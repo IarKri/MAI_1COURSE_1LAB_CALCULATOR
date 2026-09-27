@@ -2,8 +2,9 @@ import argparse
 import re
 import sys
 
+from src.toolkit.tokenizer import tokenize
 from src.toolkit.calculator import calculation
-from src.toolkit.validator import initial_calculation_validation, initial_convertation_validation, space_cleaner
+from src.toolkit.validator import initial_calculation_validation, initial_convertation_validation, space_cleaner, operators_formatter
 from src.toolkit.converter import convertation
 from src.toolkit.json_dump import  calculator_dump, converter_dump
 
@@ -78,6 +79,7 @@ def parser(argv=None):
 def calculator(expression):
     try:
         expression=space_cleaner(expression)
+        expression=operators_formatter(expression)
         initial_calculation_validation(expression)
         result=calculation(expression)
         calculator_dump(expression, result)
@@ -94,7 +96,7 @@ def calculator(expression):
 
 def converter(value, from_unit, to_unit):
     try:
-        initial_calculation_validation(from_unit,to_unit)
+        initial_convertation_validation(from_unit,to_unit)
         result=convertation(value, from_unit, to_unit)
         print(result)
         converter_dump(value, from_unit, to_unit, result)

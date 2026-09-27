@@ -3,29 +3,29 @@ from src.toolkit.converter import convertation
 # from src.toolkit.validator import space_cleaning
 
 @pytest.mark.parametrize(
-    "value, from_unit_to_unit, expected",
+    "value, from_unit, to_unit, expected",
     [
         #length
-        (10, "from cm to mm", 100.0),
-        (10, "from m to km", 0.01),
-        (100, "from cm to m", 1.0),
-        (5, "from km to m", 5000.0),
-        (1200, "from mm to m", 1.2),
+        (10, "cm", "mm", 100.0),
+        (10, "m", "km", 0.01),
+        (100, "cm", "m", 1.0),
+        (5, "km", "m", 5000.0),
+        (1200, "mm", "m", 1.2),
 
         #weight
-        (500, "from g to KG", 0.5),
-        (3.42, "from kg to g", 3420.0),
-        (1234, "from g to kg", 1.234),
+        (500, "g", "KG", 0.5),
+        (3.42, "kg" ,"g", 3420.0),
+        (1234, "g", "kg", 1.234),
 
         #temperature
-        (20, "from C to K", 293.15),
-        (286, "from k to f", 55.13),
-        (50, "from f to k", 283.15),
-        (-25, "from c to f", -13.0),
+        (20, "C", "K", 293.15),
+        (286, "k", "f", 55.13),
+        (50, "f", "k", 283.15),
+        (-25, "c", "f", -13.0),
     ]
 )
 
-def test_valid_convertion(value, from_unit_to_unit, expected):
-    assert convertation(value, from_unit_to_unit) == pytest.approx(expected)
+def test_valid_convertation(value, from_unit, to_unit, expected):
+    assert convertation(value, from_unit, to_unit) == pytest.approx(expected)
 
 
