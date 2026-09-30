@@ -7,6 +7,7 @@ class Stack:
     Attributes:
         items: список, для хранения элементов
     '''
+
     def __init__(self):
         '''
         создание пустого списка, в котором будут лежать элементы
@@ -48,4 +49,3 @@ class Stack:
         длина стэка
         '''
         return len(self.items)
-

@@ -1,6 +1,5 @@
-import sys
-import pytest
 from toolkit.__main__ import main
+
 
 def test_calc_simpliest_tests(capsys):
     main(["calc", "1+3"])
@@ -49,6 +48,7 @@ def test_convert_length(capsys):
     captured = capsys.readouterr()
     assert captured.out.strip() == "1.5"
 
+
 def test_convert_weight(capsys):
     main(["convert", "1000", "--from", "g", "--to", "kg"])
     captured = capsys.readouterr()
@@ -59,9 +59,3 @@ def test_convert_temperature(capsys):
     main(["convert", "25", "--from", "c", "--to", "k"])
     captured = capsys.readouterr()
     assert captured.out.strip() == "298.15"
-
-
-
-
-
-
